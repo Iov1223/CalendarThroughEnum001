@@ -1,6 +1,6 @@
 ﻿namespace CalendarThroughEnum001
 {
-    enum DayOfWeekEnum : byte
+    enum DayOfWeekEnum
     {
         monday,
         tuesday,
@@ -9,5 +9,15 @@
         friday,
         saturday,
         sunday
+    }
+    enum DayOfWeekEnumRus
+    {
+        Понедельник,
+        Вторник,
+        Среда,
+        Четверг,
+        Пятница,
+        СУббота,
+        Воскресенье
     }
 }
