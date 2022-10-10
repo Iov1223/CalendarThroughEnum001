@@ -77,6 +77,7 @@ namespace CalendarThroughEnum001
             var day = Enum.GetName(typeof(DayOfWeekEnumRus),numDay);
             Console.WriteLine("Дата {0} - это {1}.", args, day); // второй вариант
             // если второй вариант не работает, то воспользуйтесь первым, проверить возможности не было, правил с телефона
+            // как вы сами говорите "гениальный код написанный ночью, утром не является таковым") 
         }
     }
     internal class Program
