@@ -71,9 +71,12 @@ namespace CalendarThroughEnum001
             {
                 date.Month -= 2;
             }
-            int day = (date.Day + 31 * date.Month / 12 + date.Year + date.Year / 4 - date.Year / 100 + date.Year / 400) % 7;
-            string[] dayWeek = Enum.GetNames(typeof(DayOfWeekEnumRus));
-            Console.WriteLine("Дата {0} - это {1}.", args, dayWeek[day - 1]);
+            int numDay = (date.Day + 31 * date.Month / 12 + date.Year + date.Year / 4 - date.Year / 100 + date.Year / 400) % 7;
+            /*string[] dayWeek = Enum.GetNames(typeof(DayOfWeekEnumRus));
+            Console.WriteLine("Дата {0} - это {1}.", args, dayWeek[numDay - 1]); первый вариант*/
+            var day = Enum.GetName(typeof(DayOfWeekEnumRus),numDay);
+            Console.WriteLine("Дата {0} - это {1}.", args, day); // второй вариант
+            // если второй вариант не работает, то воспользуйтесь первым, проверить возможности не было, правил с телефона
         }
     }
     internal class Program
