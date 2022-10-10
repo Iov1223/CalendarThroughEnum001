@@ -74,6 +74,7 @@ namespace CalendarThroughEnum001
             int numDay = (date.Day + 31 * date.Month / 12 + date.Year + date.Year / 4 - date.Year / 100 + date.Year / 400) % 7;
             /*string[] dayWeek = Enum.GetNames(typeof(DayOfWeekEnumRus));
             Console.WriteLine("Дата {0} - это {1}.", args, dayWeek[numDay - 1]); первый вариант*/
+            numDay -= 1;
             var day = Enum.GetName(typeof(DayOfWeekEnumRus),numDay);
             Console.WriteLine("Дата {0} - это {1}.", args, day); // второй вариант
             // если второй вариант не работает, то воспользуйтесь первым, проверить возможности не было, правил с телефона
